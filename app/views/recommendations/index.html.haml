@@ -1,0 +1,6 @@
+%h1 Recommendations
+
+= form_tag '/recommendations', method: 'POST' do
+  = label_tag :tag_id, 'Select a tag'
+  = select_tag :tag_id, options_for_select(@tag_options)
+  = submit_tag 'Get recommendations', id: 'get-recommendation'
