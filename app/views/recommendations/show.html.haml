@@ -7,13 +7,4 @@
       %td= link_to tool['name'], tool['canonical_url']
       %td Used by companies like #{company_names(tool)}
 
-@layers.each do |layer|
-  Top tools for #{layer.name}
-  %table
-    - @layer['tools'].each do |tool|
-      %tr
-        %td= image_tag tool['image_url'], class: 'tool-img'
-        %td= link_to tool['name'], tool['canonical_url']
-        %td Used by companies like #{company_names(tool)}
-        
 = link_to 'Select a different tag', recommendations_path
